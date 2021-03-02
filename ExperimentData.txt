@@ -1,0 +1,74 @@
+Begin Test: Simple
+Success: Mean of ellapsed 2654.66 ms
+        0.8089487 GFLOPS
+End Test: Simple
+
+Begin Test: Simple parallel
+Success: Mean of ellapsed 1563.18 ms
+        1.3737916 GFLOPS
+End Test: Simple parallel
+
+Begin Test: Swap loop ordering
+Success: Mean of ellapsed 1523.16 ms
+        1.4098871 GFLOPS
+End Test: Swap loop ordering
+
+Begin Test: Swap loop ordering parallel
+Success: Mean of ellapsed 795.24 ms
+        2.700422 GFLOPS
+End Test: Swap loop ordering parallel
+
+Begin Test: 4 step loop unrolling
+Success: Mean of ellapsed 1387.02 ms
+        1.5482715 GFLOPS
+End Test: 4 step loop unrolling
+
+Begin Test: 4 step loop unrolling parallel
+Success: Mean of ellapsed 548.42 ms
+        3.9157648 GFLOPS
+End Test: 4 step loop unrolling parallel
+
+Begin Test: AVX
+Success: Mean of ellapsed 281.73 ms
+        7.622488 GFLOPS
+End Test: AVX
+
+Begin Test: AVX parallel
+Success: Mean of ellapsed 120.55 ms
+        17.814049 GFLOPS
+End Test: AVX parallel
+
+Begin Test: Cache blocking
+Success: Mean of ellapsed 1630.1 ms
+        1.3173938 GFLOPS
+End Test: Cache blocking
+
+Begin Test: Cache blocking paralell
+Success: Mean of ellapsed 1092.45 ms
+        1.9657502 GFLOPS
+End Test: Cache blocking paralell
+
+Begin Test: Cache blocking + 4step loop unrolling
+Success: Mean of ellapsed 1298.45 ms
+        1.6538825 GFLOPS
+End Test: Cache blocking + 4step loop unrolling
+
+Begin Test: Cache blocking + 4step loop unrolling parallel
+Success: Mean of ellapsed 468.24 ms
+        4.5862885 GFLOPS
+End Test: Cache blocking + 4step loop unrolling parallel
+
+Begin Test: Cache blocking + AVX
+Success: Mean of ellapsed 130.36 ms
+        16.473486 GFLOPS
+End Test: Cache blocking + AVX
+
+Begin Test: Cache blocking + AVX parallel
+Success: Mean of ellapsed 51.97 ms
+        41.3216 GFLOPS
+End Test: Cache blocking + AVX parallel
+
+Begin Test: OpenBLAS
+Success: Mean of ellapsed 28.88 ms
+        74.35885 GFLOPS
+End Test: OpenBLAS
