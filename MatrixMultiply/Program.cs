@@ -6,7 +6,7 @@ namespace MatrixMultiply
     static class Program
     {
         static readonly Random RAND = new Random();
-        const int SAMPLE_NUM = 10;
+        const int SAMPLE_NUM = 100;
 
         static void Main(string[] args)
         {
@@ -25,18 +25,18 @@ namespace MatrixMultiply
             right.InitByRandNum();
             Matrix.ParallelMult_1(left, right, productTest);
 
-            //DoTest("Simple", Matrix.Mult_0, left, right, productTest);
-            //DoTest("Simple parallel", Matrix.ParallelMult_0, left, right, productTest);
-            //DoTest("Swap loop ordering", Matrix.Mult_1, left, right, productTest);
-            //DoTest("Swap loop ordering parallel", Matrix.ParallelMult_1, left, right, productTest);
-            //DoTest("4 step loop unrolling", Matrix.Mult_2, left, right, productTest);
-            //DoTest("4 step loop unrolling parallel", Matrix.ParallelMult_2, left, right, productTest);
+            DoTest("Simple", Matrix.Mult_0, left, right, productTest);
+            DoTest("Simple parallel", Matrix.ParallelMult_0, left, right, productTest);
+            DoTest("Swap loop ordering", Matrix.Mult_1, left, right, productTest);
+            DoTest("Swap loop ordering parallel", Matrix.ParallelMult_1, left, right, productTest);
+            DoTest("4 step loop unrolling", Matrix.Mult_2, left, right, productTest);
+            DoTest("4 step loop unrolling parallel", Matrix.ParallelMult_2, left, right, productTest);
             DoTest("Cache blocking + 4step loop unrolling", Matrix.Mult_3, left, right, productTest);
-            //DoTest("Cache blocking + 4step loop unrolling parallel", Matrix.ParallelMult_3, left, right, productTest);
-            //DoTest("Cache blocking + AVX", Matrix.Mult_4, left, right, productTest);
-            //DoTest("Cache blocking + AVX parallel", Matrix.ParallelMult_4, left, right, productTest);
-            //DoTest("Cache blocking + Matrix4x4", Matrix.Mult_5, left, right, productTest);
-            //DoTest("OpenBLAS", Matrix.Mult_OpenBLAS, left, right, productTest);
+            DoTest("Cache blocking + 4step loop unrolling parallel", Matrix.ParallelMult_3, left, right, productTest);
+            DoTest("Cache blocking + AVX", Matrix.Mult_4, left, right, productTest);
+            DoTest("Cache blocking + AVX parallel", Matrix.ParallelMult_4, left, right, productTest);
+            DoTest("Cache blocking + Matrix4x4", Matrix.Mult_5, left, right, productTest);
+            DoTest("OpenBLAS", Matrix.Mult_OpenBLAS, left, right, productTest);
         }
 
         static void DoTest(string testLabel, Action<Matrix, Matrix, Matrix> func, Matrix left, Matrix right, Matrix productTest)
