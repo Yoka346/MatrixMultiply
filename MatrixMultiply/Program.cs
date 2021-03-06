@@ -33,9 +33,8 @@ namespace MatrixMultiply
             DoTest("4 step loop unrolling parallel", Matrix.ParallelMult_2, left, right, productTest);
             DoTest("Cache blocking + 4step loop unrolling", Matrix.Mult_3, left, right, productTest);
             DoTest("Cache blocking + 4step loop unrolling parallel", Matrix.ParallelMult_3, left, right, productTest);
-            DoTest("Cache blocking + AVX", Matrix.Mult_4, left, right, productTest);
-            DoTest("Cache blocking + AVX parallel", Matrix.ParallelMult_4, left, right, productTest);
-            DoTest("Cache blocking + Matrix4x4", Matrix.Mult_5, left, right, productTest);
+            DoTest("Cache blocking + FMA", Matrix.Mult_4, left, right, productTest);
+            DoTest("Cache blocking + FMA parallel", Matrix.ParallelMult_4, left, right, productTest);
             DoTest("OpenBLAS", Matrix.Mult_OpenBLAS, left, right, productTest);
         }
 

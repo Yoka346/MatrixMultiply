@@ -348,7 +348,7 @@ namespace MatrixMultiply
                         product[i, j] += left[i, k] * right[k, j];
         }
 
-        public static unsafe void Mult_4(Matrix left, Matrix right, Matrix product)    // タイリング + AVX
+        public static unsafe void Mult_4(Matrix left, Matrix right, Matrix product)    // タイリング + FMA
         {
             const int BLOCK_SIZE = 64;
             const int AVX_FLOAT_VEC_DIM = 8;
